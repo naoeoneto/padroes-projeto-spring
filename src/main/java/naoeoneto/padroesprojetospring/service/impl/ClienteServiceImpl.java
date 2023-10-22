@@ -16,13 +16,12 @@ import naoeoneto.padroesprojetospring.service.ViaCepService;
 public class ClienteServiceImpl implements ClienteService {
 	@Autowired
 	private ClienteRepository clienteRepository;
+
 	@Autowired
 	private EnderecoRepository enderecoRepository;
+
 	@Autowired
 	private ViaCepService viaCepService;
-	
-	// Strategy: Implementar os métodos definidos na interface.
-	// Facade: Abstrair integrações com subsistemas, provendo uma interface simples.
 
 	@Override
 	public Iterable<Cliente> buscarTodos() {
