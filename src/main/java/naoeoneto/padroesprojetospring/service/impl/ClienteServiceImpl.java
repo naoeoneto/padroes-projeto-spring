@@ -35,12 +35,12 @@ public class ClienteServiceImpl implements ClienteService {
 	}
 
 	@Override
-	public void inserir(Cliente cliente) {
+	public void inserirCliente(Cliente cliente) {
 		salvarClienteComCep(cliente);
 	}
 
 	@Override
-	public void atualizar(Long id, Cliente cliente) {
+	public void atualizarCliente(Long id, Cliente cliente) {
 		Optional<Cliente> clienteBd = clienteRepository.findById(id);
 		if (clienteBd.isPresent()) {
 			salvarClienteComCep(cliente);
